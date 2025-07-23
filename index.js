@@ -71,6 +71,7 @@ sayMyName("ming")
 sayMyName("john")
 
 let sum = 0;
-for (let i = 1; i <= 100; i++)
+for (let i = 1; i <= 100; i++) {
     sum = sum + i;
+}
 console.log("1 到 100 的總和是：", sum);
