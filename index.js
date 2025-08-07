@@ -1,10 +1,10 @@
-console.log("hello world")
-0.5
-1
-;("use strict")
-;("jhhjgj")
-true
-false
+// console.log("hello world")
+// 0.5
+// 1
+// ;("use strict")
+// ;("jhhjgj")
+// true
+// false
 
 // let number = 2 // .toFixed(2) // "2.00" 2 "2.01" 2.01
 // const name = "jac"
@@ -120,47 +120,69 @@ let b = 20
 // 70-79 return C
 // 0-69 return D
 // const checkScore = function (score) {}
-const checkScoreWithFullRange = function (score) {
+// const checkScoreWithFullRange = function (score) {
 
-  // 判斷式從最高分開始，每個都包含上限和下限
-  if (score >= 95 && score <= 100) {
-    return "A+";
-  } else if (score >= 90 && score <= 94) {
-    return "A";
-  } else if (score >= 80 && score <= 89) {
-    return "B";
-  } else if (score >= 70 && score <= 79) {
-    return "C";
-  } else if (score >= 0 && score <= 69) {
-    // 注意：D 也需要一個明確的範圍了
-    return "D";
-  } else {
-    // 如果以上所有範圍都不符合，那它就是一個無效的分數
-    return "無效的分數";
+//   // 判斷式從最高分開始，每個都包含上限和下限
+//   if (score >= 95 && score <= 100) {
+//     return "A+";
+//   } else if (score >= 90 && score <= 94) {
+//     return "A";
+//   } else if (score >= 80 && score <= 89) {
+//     return "B";
+//   } else if (score >= 70 && score <= 79) {
+//     return "C";
+//   } else if (score >= 0 && score <= 69) {
+//     // 注意：D 也需要一個明確的範圍了
+//     return "D";
+//   } else {
+//     // 如果以上所有範圍都不符合，那它就是一個無效的分數
+//     return "無效的分數";
+//   }
+// };
+// // --- 測試這個函式 ---
+// console.log("--- 開始測試明確範圍版本 ---");
+// console.log(`分數 100 的等級是: ${checkScoreWithFullRange(100)}`);
+// console.log(`分數 94 的等級是: ${checkScoreWithFullRange(94)}`);
+// console.log(`分數 75 的等級是: ${checkScoreWithFullRange(75)}`);
+// console.log(`分數 69 的等級是: ${checkScoreWithFullRange(69)}`);
+// console.log(`分數 105 的等級是: ${checkScoreWithFullRange(105)}`);
+// console.log(`分數 -1 的等級是: ${checkScoreWithFullRange(-1)}`);
+// console.log("--- 測試結束 ---");
+
+// // 99乘法表
+// console.log("--- 九九乘法表 (主控台版) ---");
+
+// // 外層迴圈：代表被乘數 (i)
+// for (let i = 1; i <= 9; i++) {
+//   // 內層迴圈：代表乘數 (j)
+//   for (let j = 1; j <= 9; j++) {
+//     // 計算結果
+//     let result = i * j;
+//     // 使用樣板字面值 (template literal) 來組合字串並印出，模板制服`用${}來放變數
+//     console.log(`${i} × ${j} = ${result}`);
+//   }
+//   // 每輪外層迴圈結束後，印一條分隔線，讓版面更清晰
+//   console.log("--------------------");
+// }
+
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
   }
-};
-// --- 測試這個函式 ---
-console.log("--- 開始測試明確範圍版本 ---");
-console.log(`分數 100 的等級是: ${checkScoreWithFullRange(100)}`);
-console.log(`分數 94 的等級是: ${checkScoreWithFullRange(94)}`);
-console.log(`分數 75 的等級是: ${checkScoreWithFullRange(75)}`);
-console.log(`分數 69 的等級是: ${checkScoreWithFullRange(69)}`);
-console.log(`分數 105 的等級是: ${checkScoreWithFullRange(105)}`);
-console.log(`分數 -1 的等級是: ${checkScoreWithFullRange(-1)}`);
-console.log("--- 測試結束 ---");
-
-// 99乘法表
-console.log("--- 九九乘法表 (主控台版) ---");
-
-// 外層迴圈：代表被乘數 (i)
-for (let i = 1; i <= 9; i++) {
-  // 內層迴圈：代表乘數 (j)
-  for (let j = 1; j <= 9; j++) {
-    // 計算結果
-    let result = i * j;
-    // 使用樣板字面值 (template literal) 來組合字串並印出，模板制服`用${}來放變數
-    console.log(`${i} × ${j} = ${result}`);
+  sayName() {
+    console.log(this.name)
   }
-  // 每輪外層迴圈結束後，印一條分隔線，讓版面更清晰
-  console.log("--------------------");
 }
+
+// const jac = new Person("jac", 20)
+// jac.sayName() // jac
+// const mary = new Person("mary", 21)
+// mary.sayName() // mary
+
+console.log("Hello world".length)
+console.log("Hello world".substring(0,3))
+console.log("Hello world".toUpperCase())
+const word = "hello world"
+
+console.log(word.substring(0, 1).toUpperCase() + word.substring(1))
