@@ -185,4 +185,8 @@ console.log("Hello world".substring(0,3))
 console.log("Hello world".toUpperCase())
 const word = "hello world"
 
-console.log(word.substring(0, 1).toUpperCase() + word.substring(1))
+// console.log(word.substring(0, 1).toUpperCase() + word.substring(1))
+console.log(
+  word.substring(0, 1).toUpperCase() + // H
+    word.substring(1, word.lenth) // hello world
+)
