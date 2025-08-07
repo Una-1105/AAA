@@ -181,12 +181,189 @@ class Person {
 // mary.sayName() // mary
 
 console.log("Hello world".length)
-console.log("Hello world".substring(0,3))
+console.log("Hello world".substring(0, 3))
 console.log("Hello world".toUpperCase())
 const word = "hello world"
 
-// console.log(word.substring(0, 1).toUpperCase() + word.substring(1))
 console.log(
   word.substring(0, 1).toUpperCase() + // H
-    word.substring(1, word.lenth) // hello world
+    word.substring(1, word.length) // ello world
 )
+
+// string
+// console.log("1,jac,wang,21;2,mary,yang,22".split(";"))
+
+// xml
+{
+  /* <students>
+  <student>
+    <firstname>jac</firstname>
+    <age>21</age>
+  </student>
+  <student>
+    <firstname>mary</firstname>
+    <age>22</age>
+  </student>
+</students> */
+}
+
+// json
+const students = [
+  {
+    id: 1,
+    last_name: "林",
+    first_name: "美玲",
+    gender: "female",
+    phone: "0912-345-678",
+    birthday: "1998-03-15",
+    email: "meiling.lin@email.com",
+  },
+  {
+    id: 2,
+    last_name: "王",
+    first_name: "俊傑",
+    gender: "male",
+    phone: "0923-456-789",
+    birthday: "1997-11-22",
+    email: "junjie.wang@email.com",
+  },
+  {
+    id: 3,
+    last_name: "張",
+    first_name: "雅婷",
+    gender: "female",
+    phone: "0934-567-890",
+    birthday: "1999-07-30",
+    email: "yating.zhang@email.com",
+  },
+  {
+    id: 4,
+    last_name: "李",
+    first_name: "建志",
+    gender: "male",
+    phone: "0945-678-901",
+    birthday: "1998-09-05",
+    email: "jianzhi.li@email.com",
+  },
+  {
+    id: 5,
+    last_name: "陳",
+    first_name: "佳蓉",
+    gender: "female",
+    phone: "0956-789-012",
+    birthday: "1997-05-18",
+    email: "jiarong.chen@email.com",
+  },
+  {
+    id: 6,
+    last_name: "黃",
+    first_name: "志明",
+    gender: "male",
+    phone: "0967-890-123",
+    birthday: "1999-01-10",
+    email: "zhiming.huang@email.com",
+  },
+  {
+    id: 7,
+    last_name: "吳",
+    first_name: "芳瑜",
+    gender: "female",
+    phone: "0978-901-234",
+    birthday: "1998-12-03",
+    email: "fangyu.wu@email.com",
+  },
+  {
+    id: 8,
+    last_name: "劉",
+    first_name: "家豪",
+    gender: "male",
+    phone: "0989-012-345",
+    birthday: "1997-08-20",
+    email: "jiahao.liu@email.com",
+  },
+  {
+    id: 9,
+    last_name: "蔡",
+    first_name: "雅琪",
+    gender: "female",
+    phone: "0990-123-456",
+    birthday: "1999-04-25",
+    email: "yaqi.cai@email.com",
+  },
+  {
+    id: 10,
+    last_name: "楊",
+    first_name: "志遠",
+    gender: "male",
+    phone: "0901-234-567",
+    birthday: "1998-06-12",
+    email: "zhiyuan.yang@email.com",
+  },
+]
+// forEach
+for (let i = 0; i < students.length; i++) {
+  console.log(students[i].first_name)
+}
+students.forEach(function (student) {
+  console.log(student.first_name)
+})
+
+// filter
+// const result = []
+// for (let i = 0; i < students.length; i++) {
+//   if (students[i].gender == "male") {
+//     result.push(students[i])
+//   }
+// }
+// console.log(result)
+console.log(
+  students.filter(function (student) {
+    return student.gender == "male"
+  })
+)
+
+// map
+// const result = []
+// for (let i = 0; i < students.length; i++) {
+//   result.push({
+//     // id: students[i].id,
+//     // first_name: students[i].first_name,
+//     // last_name: students[i].last_name,
+//     // gender: students[i].gender,
+//     // phone: students[i].phone,
+//     // birthday: students[i].birthday,
+//     // email: students[i].email,
+//     ...students[i],
+//     age: new Date().getFullYear() - students[i].birthday.substring(0, 4),
+//   })
+//   // console.log(new Date().getFullYear() - students[i].birthday.substring(0, 4))
+// }
+// console.log(result)
+
+// reduce
+// let sum = 0
+// for (let i = 0; i < students.length; i++) {
+//   sum += new Date().getFullYear() - students[i].birthday.substring(0, 4)
+// }
+// console.log(sum)
+
+// console.log(JSON.parse(JSON.stringify(students)))
+
+// fetch
+fetch("https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json")
+  .then(function (res) {
+    return res.json()
+  })
+  .then(function (json) {
+    console.log(json)
+  })
+
+  // setInterval
+
+  // setTimeout
+  setTimeout(function () {
+    console.log("timeout")
+  }, 1000)
+  setTimeout(() => {
+    clearInterval(timer)
+  }, 5000)
